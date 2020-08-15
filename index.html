@@ -258,20 +258,20 @@
                 open: function( event, ui ) {
                     console.log('De modal is nu open');
                     $(this).find("video").get(0).play();
-                    $(this).find(".imgplaybtn").attr('src','/assets/pause.svg');
+                    $(this).find(".imgplaybtn").attr('src','assets/pause.svg');
                     $(this).find(".forwardbtn").css('display', 'inline-block');
                     $(this).find(".playbtn").click(function(){
                         console.log(this);
                         if(!klikkie){
                             klikkie = true;
                             console.log("geen klikkie!")
-                            $(this).find(".imgplaybtn").attr('src','/assets/pause.svg');
+                            $(this).find(".imgplaybtn").attr('src','assets/pause.svg');
                             $(this).parent().find(".forwardbtn").css('display', 'inline-block');
                             $(this).parent().parent().find("video").get(0).play();
                         } else{
                             klikkie = false;
                             console.log("klikkie!")
-                            $(this).find(".imgplaybtn").attr('src','/assets/Play.svg');
+                            $(this).find(".imgplaybtn").attr('src','assets/Play.svg');
                             $(this).parent().find(".forwardbtn").css('display', 'none');
                             $(this).parent().parent().find("video").get(0).pause();
 
@@ -318,12 +318,12 @@
                 if(!geklikt){
                     player.pause();
                     geklikt = true;
-                    btnimg.attr('src','/assets/Play.svg');
+                    btnimg.attr('src','assets/Play.svg');
                     thisforward.css('display', 'none');
                 } else{
                     player.play();
                     geklikt = false;
-                    btnimg.attr('src','/assets/pause.svg');
+                    btnimg.attr('src','assets/pause.svg');
                     thisforward.css('display', 'inline-block');
                 }
                 });
@@ -351,7 +351,7 @@
                 var time = player.currentTime();
                 console.log(time);
                 if (time>=duration){
-                    btnimg.attr('src','/assets/Play.svg');
+                    btnimg.attr('src','assets/Play.svg');
                     thisforward.css('display', 'none');
                 }
                 });
